@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\begin{document}
+\title{Paper Reviews}
+%\author{Didier Gohourou}
+\date{2020-07-24}
+\maketitle
+
+\section*{Review 1}
+Liang Chen, Yang Liu, Xiangnan He, Lianli Gao, Zibin Zheng. 2019. 
+Matching User with Item Set: Collaborative Bundle Recommendation with Deep 
+Attention Network. 
+Proceedings of the Twenty-Eighth International Joint Conference on Artificial 
+Intelligence.
+
+\subsection*{Summary}
+Most recommendation mechanism focus on recommending a single item, while 
+many real world scenarios such as travel package, music playlist, furniture, 
+etc. will benefit from bundle recommendation.\\
+Efficiently recommending a set of items comes with its own challenges including
+the fact that bundles cannot be considered like atomic units, thus requiring 
+an efficient way to embbed the bundle; and also that user-bundle 
+interactions are more sparse, thus finding an efficient way to handle those 
+sparse interactions.\\
+
+The proposed model named Deep Attentive Multitask (DAM) was design to tackle 
+the above mentionned difficulties. This is achieved with a factorized attention
+network (an adaptive weighting sum operation) for a bundle representation 
+learning, and a joint modeling of user-bundle and user-item interactions, by 
+sharing the information learned from the user-item interactions in the two 
+tasks of user-bundle prediction and user-item prediction.
+
+Experiments were ran using datasets from the Netease Cloud Music where users 
+can build lists of songs, and the Youshu book review site where users can build
+lists of books.\\
+The experiments aimed at answering the following questions: 
+\begin{enumerate}
+\item Can the proposed DAM outperform the state-of-the-art bundle 
+recommendation models?
+\item How is the effectiveness of factorized attention network? 
+Can it perform better than the other aggregation strategies?
+\item Can multi-tast learning framework improve DAM's performance? How does the number of shared layer affect the model performance?
+\end{enumerate}
+
+To the first question, the DAM proved to outperform the state-of-the-art 
+bundle recommendation models while compared to BPR (a basic pairwise ranking
+algorithm), Neural Collaborative Filtering (NFC), Bundle Ranking (BR) and 
+Embeddeing Factorization Machine (EFM).\\
+To the second question, the factorized attention approach achieve the best performance  when compared to minPooling, maxPooling, meanPooling and a neural 
+attention mechanism.\\
+To the third question, sharing the layers for the different tasks prove to be 
+effective up to 2 layers over 3 hidden layers.\\
+
+The proposed model is a deep attentive multitask model for bundle 
+recommendation. It uses factorized attention network to aggregate the item 
+information of each bundle, a multi-task network to share knowledge of 
+both user-item and user-bundle embbedings, and shared layers to enchance 
+the recommendation performance. The model prove its superior effectiveness 
+compared to state-of-the-art methods.
+
+Future works include modelin the item co-occurence infoemation and realizing 
+the bundle with temporal dynamics.
+
+\subsection*{Comments}
+The paper address a useful task (items bundle recommendation) that is 
+seldomly approach in the popular field of recommendation systems. 
+The authors make use of many of the recent deep learning  techniques in their 
+models such as  \textit{multi-task learning} by training a 
+model that is able to learn from user-item interactions and user-bundle 
+interactions, while using an \textit{attention based learning} mechanism. 
+
+The study is presented in an easy to reproduce way. Most steps, from the 
+dataset acquisition to experiment results are clearly detailed. That include 
+the network model parameters and hyperparameters, how the input vector 
+was setup, the choice of a specific loss function (Bayesian Personalized 
+Ranking loss), etc.\\
+
+Regarding our research, this paper give a concrete example of building an 
+item-set recommendation system. Though the bundle are predefined we may 
+think of an extension of this work by building \textbf{a recommendation 
+mechanism for a set of items where the bundle is build during the 
+recommendation process}, using a graph learning model.\\
+The paper also have some interesting pointers on deep learning for 
+recommendation systems including one with graph learing models.
+
+\section*{Review 2}
+
+\subsection*{Summary}
+(Summary here)
+
+\subsection*{Comments}
+(Comments here)
+
+\section*{Review 3}
+L. Chen and P. Pu. Preference-based organization interfaces: Aiding user 
+critiques in recommender systems. In International Conference on 
+User Modeling, pages 77–86, 2007
+
+\subsection*{Summary}
+(Summary here)
+
+\subsection*{Comments}
+(Comments here)
+
+\end{document}
