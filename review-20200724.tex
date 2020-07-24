@@ -84,22 +84,69 @@ The paper also have some interesting pointers on deep learning for
 recommendation systems including one with graph learing models.
 
 \section*{Review 2}
+Dwivedi, Vijay Prakash; Joshi, Chaitanya K.; Laurent, Thomas; Bengio, Yoshua;
+Bresson, Xavier. Benchmarking Graph Neural Newtworks. arXiv preprint 
+arXiv:2003.00982. 2020.
 
 \subsection*{Summary}
-(Summary here)
+As graph neural networks (GNN) are gaining popularity and are used in very 
+diverse fields, it becomes important to define standard mechanisms to evaluate 
+graph learning model. This raise the questions of how to define approriate 
+datasets for the benchmark task, and how to define common experimental 
+settings.\\
+This study address the described problems and contribute by releasing an 
+open benchmark infrasstructure for GNNs, proposing medium sized datasets 
+compared to the relatively small ones frequently used, identifying important
+building blocks of GNNs with the proposed benchmark infdrastructure.
+
+The study consider most of the popular graph neural networks in the 
+litterature including: Graph Convolutional Network, GraphSage, Graph I
+Isomorphism Network, as well as Guassian Mixture Model Networks, 
+Gated Grraph Convolutional Network, and Graph Attention Network among 
+others.\\
+Different type of experiments are run using commonly used (small) dsatasets 
+(TU and CORA), as well as proposed datasets generated from MNIST and CIFAR10
+usingthe a technique named SLIC super-pixels, and stochastic block model (SMB)
+datasets among others.
+
+The different numerical experiments include two graph classification tasks, 
+a graph regression task, a node classification task and an edge classification
+task. For each experiment, specific steps has been described: Splitting 
+(how the dataset was split), training (the selected optimizer), accuracy 
+(the performance metric used), reproducibility (to what degree the results 
+are reproducible), and others specificity of the experiment such as additional
+layer or techniques of the experimented model.
+
+Out of the experiments, the following was noted: 
+\begin{enumerate}
+	\item Graph-agnostic NNs (MLP) perform as well as GNNs on small datasets.
+	\item GNNs improve upon graph-agnostic NNs for lager datasets
+	\item Vanilla GCN have relatively poor performance
+	\item New isotropic GNN architectures improves on GCN
+	\item Anisotropic GNNs are accurate
+	\item Residual connections improve performance
+	\item Normalization layers can improve learning
+\end{enumerate}
+
+The paper propose a benchmarking framework to facilitate the study of
+graph neural networks, using some datasets and a consistent experimental 
+protocol. 
 
 \subsection*{Comments}
-(Comments here)
+The paper is an attempt to address an important piece to the development of 
+the trending field of graph neural networks. Providing a benchmarking 
+framework will advance the field with a common ground to evaluate how 
+each (new) model is improving the state-of-the-art. 
 
-\section*{Review 3}
-L. Chen and P. Pu. Preference-based organization interfaces: Aiding user 
-critiques in recommender systems. In International Conference on 
-User Modeling, pages 77–86, 2007
+The intent of the study is well stated and the results proposed in the paper 
+are a good start. Yet, the results look very specific to current graph 
+neural networks models. It is difficult to see how the same conclusionx will 
+hold against future GNNs models and how those will fit in this proposed 
+benchmarking framework.\\
 
-\subsection*{Summary}
-(Summary here)
+Since our research interest include graph learning, making use of a standard 
+benchmarking framework will help us clearly positionned our model or the 
+performance of a GNNs model we will apply related to the state of the art.
 
-\subsection*{Comments}
-(Comments here)
 
 \end{document}
