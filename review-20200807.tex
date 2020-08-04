@@ -2,8 +2,8 @@
 
 \begin{document}
 \title{Paper Reviews}
-%\author{Didier Gohourou}
-\date{yyyy-mm-dd}
+\author{Didier Gohourou\\ Semlab Ritsumeikan University}
+\date{2020-08-07}
 \maketitle
 
 \section*{Review 1}
@@ -15,20 +15,47 @@ June. http://arxiv.org/abs/1907.00710.
 The need for conversational agents have proved to be a necessity in the 
 travelling business especially for venue recommendation. Building appropriate 
 conversational agent models is still a challenge. On one hand existing models 
-are generaly neural conversational models that use an end to end approach. 
+are generaly neural conversational models that use an end to end approaches. 
 Such models are good at capturing the local structure of word sequence 
 but faces difficulty in remembering the global semantic structure of a 
-dialog session. On the other hand, Methods for venue recommendation show
+dialog session. On the other hand, methods for venue recommendation show
 limitation from their reliance on the exact match of constraints which is 
 sensitive to language variation, weak relationship models between venues 
 and the inability to backpropagate error signals from the end output to 
 the raw input.
 
-This study proposes a Deep Conversational Recommender System that is able to 
-differentiate topics in travel conversation by leveraging...
+This study proposes a Deep Conversational Recommender System, to address the 
+above mentionned limitation. It does it by using a combination of a 
+topic based model and a Graph Convolutional Network (GCN) based model. 
+The topic based component allows the agent to differentiate sub-topic 
+while extracting a global semantic. The GCN helps the conversational 
+recommender with better representation of venues.
+
+The proposed DCR model have been compared to related state-of-the-art 
+models including HRED that is based on Reccurent Neural Network to 
+predict utterances based on previous one in the discussion, MultiWOZ that 
+use a seq2seq model to map the dialog as a context to response problem, 
+TopicRNN that use a seq2seq model that incorporate topics information, 
+ReDial that is based on HRED and have a recommendation mechanism that 
+considers the co-occurence of items, NCF that uses deep learning in 
+a collaborative filtering mechanism. 
+
+Automatted evaluation mechanisms like BLEU score and Entity Accuracy 
+were used to rate the models. A Human evaluation based on criteria such 
+as Fluency, Informativeness and Ranking were also used to evaluate the models. 
+DCR proved to outperform all related models. 
+
+Future work include boosting the performance of response generation, and 
+leverage venue adoption data from travel e-commerce sites.
 
 \subsection*{Comments}
-(Comments here)
+This work is in many aspects similar to our initial research proposal, and 
+more over to our current topic. Reproducing this study will be a good 
+starting point for our own research topic titled Graph Learning for 
+Conversational Recommender Systems.  An interesting direction in which 
+we can extends this work is applying the findings to some other 
+domain of interest (business, marketing, shopping, etc), and then 
+find a way to generalize the model.
 
 \section*{Review 2}
 (Citation here) 
