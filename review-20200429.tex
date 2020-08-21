@@ -3,7 +3,7 @@
 \begin{document}
 \title{Paper Reviews}
 %\author{Didier Gohourou}
-\date{yyyy-mm-dd}
+\date{2020-04-29}
 \maketitle
 
 \section*{Review 1}
@@ -11,20 +11,76 @@ L. Chen and P. Pu. Evaluating critiquing-based recommender agents.
 In AAAI ’06, pages 157–162, July 2006.
 
 \subsection*{Summary}
-(Summary here)
+
+This paper evaluate the effectiveness of two different type of critiquing-based
+recommender agents. The critiquing-based recommender agents evaluate are
+recommender systems that simulates an artificial salesperson that recommend
+options based on users’ current preferences, and improve the accuracy of their
+recommendation each of the next step of the exchange with the user.
+
+The two types of critiquing-based recommender agents evaluated were a 
+system-proposed critiquing agent and a user-motivated critiquing agent.
+The former use a knowledge based critique to improve the accuracy of its
+current recommendation, while the latter use user-motivated critiques to
+improve the accuracy of its current recommendation.
+
+The contribution of this work is to point out the methodology for a
+comparison between the aforementioned two types of critiquing-based
+recommender agents. In fact, before describing how the experiment was
+conducted, the paper clearly describe evaluation criteria choose for 
+the task including the decision accuracy, the decision effort and the
+confidence of the different agents evaluated.
+
+The results of the evaluation showed that the user-motivated critiquing
+agent performed better on all evaluation criteria.
+
 
 \subsection*{Comments}
-(Comments here)
+
+The paper shows us the better approach to consider when building a critiquing-based recommender agent. Through this paper we also learn the key aspects to evaluate the effectiveness of a critiquing-based recommender agent. These take-away will be useful when building similar system.
+
 
 \section*{Review 2}
 L. Chen and P. Pu. Hybrid critiquing-based recommender systems. 
 In IUI ’07, page 22–31, 2007.
 
 \subsection*{Summary}
-(Summary here)
+
+After evaluating two types of critiquing-based recommender systems: one with
+a system-proposed critiques and the other with a self-motivated 
+(user-motivated) critiques, Li Chen and Pearl Pu extend their work in this
+paper by combining the two types of critiquing-based recommender system to
+build a hybrid one. They do so because after analysis, the third of they users
+found that even though the self-motivated approach outperformed the
+system-proposed one in many regards, the latter stay simpler and faster to use.
+
+The study evaluate the hybrid critiquing-based system, comparing it to a
+system-proposed approach. This work contribute by establishing an evaluation
+framework that extends the one used in their previous work. It involves both
+users’ objective performance such as decision accuracy, task completion time
+and interaction effort, as well as the users’ subjective perceptions including
+perceived cognitive effort, decision confidence and trusting intentions.
+
+The hybrid critiquing-based recommender system outperformed the system-proposed
+on almost all evaluation criteria, leading the author to conclude that the
+hybrid approach is more effective.
+
 
 \subsection*{Comments}
-(Comments here)
+
+Our take-away from this paper is to keep in mind combinations when we evaluate
+different methodologies to solve a problem. As we saw in this study, the
+combination of a system-proposed and a self-motivated critiquing based approach
+help build a system that keep the best of both approaches. 
+
+It would have been interesting if the author also looked at the technical
+performance of the hybrid system and what can be done to mitigate performance
+issues if any, since before presenting a hybrid interface at each
+recommendation cycle the system might have to do both the work of a
+system-proposed. Another interesting aspect to explore is how the hybrid
+critiquing-based system perform against a purely self-motivated critiquing
+system.
+
 
 \section*{Review 3}
 L. Chen and P. Pu. Preference-based organization interfaces: Aiding user 
@@ -32,9 +88,36 @@ critiques in recommender systems. In International Conference on
 User Modeling, pages 77–86, 2007
 
 \subsection*{Summary}
-(Summary here)
+
+In this paper, the authors present a novel method for generating 
+system-proposed critiques for a recommender system, named preference-based
+organisation.
+
+The authors showed via a compared study that their approach outperforms three
+other critique generation methods. The methods compared to include FindMe
+systems that generate critique according to their knowledge of the product
+domain, dynamic critiquing method that generate critique by discovering
+frequent set of value differences between the current recommendation and
+remaining products based on apriori algorithm, multi-attribute utility theory
+(MAUT) that present compound critique based on top candidate after computing
+the user’s current preference and comparing it to the remaining products.
+
+The preference based organization interface methodology is build upon the
+following characteristics: a user preference model based on MAUT, suggestions
+of unstated preferences in the critiques, productions of critiques typical of
+the remaining products, critiques with higher tradeoff utilities favored,
+a diversity in proposed critiques and their contained products, an incremental
+refinement of the user’s preferences.
 
 \subsection*{Comments}
-(Comments here)
+
+While presenting their methodology, the authors, provide the caracteristics
+they use to compare the different methodologies including the prediction 
+accuracy, recommendation accuracy and interaction effort reduction, they also
+provide practical formulas to evaluate their approaches to the existing ones.
+The evaluation framework presented in this paper is very elaborate and can
+serve as a framework for evaluating other approaches addressing the same
+problem.
+
 
 \end{document}
