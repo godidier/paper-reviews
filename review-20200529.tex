@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\begin{document}
+\title{Paper Reviews}
+%\author{Didier Gohourou}
+\date{2020-05-29}
+\maketitle
+
+\section*{Review 1}
+Ines Chami, Sami Abu-El-Haija, Bryan Perozzi, Christopher Ré, Kevin Murphy.
+Machine Learning on Graphs: A Model and Comprehensive Taxonomy.
+2020 in arXiv.org https://arxiv.org/abs/2005.03675
+
+\subsection*{Summary}
+
+The rapidly growing field of Graph Representation Learning (GRL) is unveiling
+three main categories: network embedding that focuses on learning unsupervised
+representation of relational structure, graph regularized neural network that
+leverages graphs to augment neural network losses, and graph neural networks
+that aim to learn differentiable function over discrete topologies with
+arbitrary structure. GraphEDM is a framework that aim to unify the previously
+described body of work using a generalization of popular algorithms for
+semi-supervised learning on graph and unsupervised learning of graph
+representation. 
+
+Graph Representation Learning algorithms can be divided in two classes
+unsupervised (e.g Deepwalk, node2vec, etc.) and supervised (e.g. GraphSage
+Graph Convolutional Networks, Graph Attention Networks), where each class
+can be subdivided according the type of the feature vector used for the
+learning algorithm, the parameters of the encoding mechanism and the
+mathematical model applied (Laplacian, Non-eucludian, Matrix factorization,
+Skip-gram, Autoencoders, Spectral, Message Passing, Spatial, etc.). 
+
+GRL algorithms described can be applied to different problems according
+to their classification. Unsupervised applications include Graph
+reconstruction, Link prediction, Clustering and Visualization while
+Supervised applications include node classification, graph classification. 
+
+Graph Representation Learning is facing challenges such as Evaluation and
+benchmarks, Fairness, Applications to large and realistic graphs, molecule
+generation, combinatorial optimization, non-eucludian embeddings theoretical
+guarantees, that lay paths for future researchs. 
+
+\subsection*{Comments}
+
+The paper offers a well organized state-of-the-art of graph learning
+algorithms overview and a clear taxonomy that can serve as a good quick
+reference for graph learning algorithms.
+
+The paper include extensible mathematical definitions of the models it
+presents. Those mathematical definitions can make the paper sometime hard
+to read and follow th reasoning, but it also make a good reference with
+enough information on the different models presented.
+
+
+\section*{Review 2}
+M. Ghazvininejad, C. Brockett, M. Chang, B. Dolan, J. Gao, W. Yih, and
+M. Galley. A Knowledge-Grounded neural conversation model.
+In AAAI’18, pages 5110–5117, 2018.
+
+\subsection*{Summary}
+
+Conversational chatbot models can be trained in an end-to-end data-driven
+fashion based on conversations datasets. However, those models are limited
+when the conversation is about an entity that have few to no occurrence
+within the training corpus. Attempts such as slot-filling approaches to
+address this limitation are not scalable.
+
+The paper present a data-driven conversational model that can draw knowledge
+from external sources and give content rich answers related to a given entity
+being the topic of the conversation. The model consist of a dialog encoder
+coupled with a fact encoder. Training data were extracted from Twitter threads
+for the dialog encoder, and from Foursquare and Wikipedia for the fact encoder.
+The techniques used within the model are a multitask learning approach that
+includes an auto encoder among other, and a decoding an re-ranking score.
+The proposed model can be viewed as a generalization of the
+Sequence-to-Sequence approach.
+
+The proposed approach is compared the a standard end-to-end (seq2seq)
+on different conversation excerpts. Automatic evaluations were made using
+a perplexity and BLUE scores. The proposed model proved to outperform the
+common seq2seq. A human evaluation also supported the conclusions of the
+automated ones. 
+
+\subsection*{Comments}
+
+The proposed model enhances the popular seq2seq model when applied to
+conversational systems. It gives a useful combination of conversational
+and non-conversational data, making a versatile and widely applicable model.
+
+Even if the author does not gives hints on future works, the proposed model
+is described in a very concise way that is yet informative enough to allow
+reproducibility based on the paper’s content.
+
+\end{document}

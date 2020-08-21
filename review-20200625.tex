@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\begin{document}
+\title{Paper Reviews}
+%\author{Didier Gohourou}
+\date{yyyy-mm-dd}
+\maketitle
+
+\section*{Review}
+. L. Herlocker, J. A. Konstan, and J. Riedl. Explaining collaborative
+filtering recommendations. In CSCW’00, pages 241–250, 2000.
+
+\subsection*{Summary}
+In contrast to content based filtering, Automated collaborative filtering
+(ACF) systems recommends items to a user based on the affinity to a similar
+community of users to that item. ACF comes with many advantages such as
+the ability to recommend any type of items since despite how difficult it
+can be to find the appropriate features for a particular item in a content
+based filtering system, this problem is inexistant for ACF. However,
+ACF comes with some disadvantages such as the ones caused by cold-start
+and the filter bubble phenomenon. For those reasons ACF were mostly used
+to recommend low risk items. 
+
+This paper explore the benefit of building an explanation mechanism within
+automated collaborative filtering systems. This study is done by answering
+three questions including: 
+\begin{itemize}
+    \item What model and techniques are effective in supporting explanation in an ACF system ?
+    \item Can explanation facilities increase the acceptance of automated collaborative systems ? 
+    \item Can explanation facilities increase the filtering performance of ACF system users ? 
+\end{itemize}
+
+Two explanation mechanism were described: The white box conceptual model
+where most of the recommendation process is explained to the user, and the
+black box model where only a confidence score is given to the user for a
+particular recommendation.
+
+Two  experiments were conducted and showed that providing explanations
+increase the acceptance of the automated collaborative systems, and tend
+to increase the filtering performance by making the user more confident
+on they recommended choices.
+
+\subsection*{Comments}
+
+While showing the benefits of an explanation mechanism for the an automated
+collaborative filtering, The paper describe how to implement such mechanism
+and what to consider when doing so. 
+
+Another issue, partly notified in the paper, emerge from providing
+explanations: how to properly present them so that most users have an easy
+understanding. Future work plan to address it as well as studying the reaction
+of the users to informational explanations versus persuasive explanations.
+
+\end{document}
