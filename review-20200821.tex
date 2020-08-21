@@ -1,0 +1,99 @@
+\documentclass{article}
+
+\begin{document}
+\title{Paper Reviews}
+%\author{Didier Gohourou}
+\date{2020-08-21}
+\maketitle
+
+\section*{Review 1}
+Perozzi, B., Al-Rfou, R., \& Skiena, S. (2014). DeepWalk: Online learning 
+of social representations. In Proceedings of the ACM SIGKDD International 
+Conference on Knowledge Discovery and Data Mining (pp. 701–710). 
+Association for Computing Machinery. https://doi.org/10.1145/2623330.2623732
+
+\subsection*{Summary}
+The sparsity of a network representation makes it difficult apply statistical
+learning algorithms. This paper introduces DeepWalk. A novel approach 
+to use models from the Natural Language Processing to learn on graph 
+structured data. 
+
+The model works by generating sequences of nodes using random walks and 
+use Skipgram, a model originating from NLP, to learn latent vector 
+representation of nodes. Those representations can later be used for 
+downstream tasks, the main being node classification task for social 
+network. Deepwalk shows advantages such as efficient computation by using 
+negative sampling, being highly paralellizable, and the ability to be 
+trained online. 
+
+Experiments were conducted to evaluate DeepWalk against related models 
+including \textit{SpectralClustering, Modularity, EdgeCluster, wvRN, Majority}.
+The experiments were conducted using datasets from BlogCatalog a network 
+of social relationships among bloggers, Flickr a network of contact among 
+photo sharing users, and Youtube a social network of users of vidoe sharing. 
+DeepWalk outperformed the other models on the social network classification 
+taks when performance are measured using an F1 score. 
+
+
+\subsection*{Comments}
+The paper introduced a novel approach, and is among the first of using 
+ Deep Learning methods, especially the one from  NLP on graph structured 
+data for learning. Despite being published in 2014, the paper became 
+popular starting 2017 when the deep learning community showed interest in 
+learing from graph structured data. This work is still used as benchmark 
+for recent paper and reviews in the emerging field of graph learning. 
+
+An intuitive comprehension of this work will help us understand how recent 
+work build upon it and in which direction progress were made in graph 
+learning and also in which direction progress is still to be made.
+
+
+
+\section*{Review 2}
+Kipf, T. N., \& Welling, M. (2017). Semi-supervised classification with 
+graph convolutional networks. In 5th International Conference on Learning 
+Representations, ICLR 2017 - Conference Track Proceedings. International 
+Conference on Learning Representations, ICLR.
+
+
+\subsection*{Summary}
+In the emerging field of graph learning a common problem is node 
+classification where a small subset of nodes are labeled (classified). 
+This paper propose a model that uses convolution operations in the solution.
+The study contribute by firstly introducing a layer-wise propagation rule 
+for neural network models and operate directly on graphs, and by secondly 
+demonstrating how this form of graph based neural network model can be 
+used for fast and scalable semi-supervised classification of nodes in graph.
+
+The theoretical motivation of the proposed model are fast approximate 
+convolutions that include the use of mechanisms such as spectral graph 
+convolution which can be defined as a multiplication of a signal with a 
+parametrized filter, and a layer-wise linear model that consist of stacking
+multiple convolutional layer.
+
+The proposed model named Graph Convolutional Network (GCN) was evaluated 
+against the following: \textit{ManiReg, SemiEmb, LP, DeepWalk, ICA, Planetoid}. 
+The experiment was ran using datasets from citation networks: Citeseer, 
+Cora, Pubmed and a knowledge graph (NELL). GCN outperform all benchmark 
+model on the percentage of accuracy in a node classificaiton task.
+
+Future work aim at addressing the current limitation of the model that are 
+a memory requirement that grows linearly with the size of the dataset, 
+the lack of support for directed edges and edge features, and the limiting
+assuptions.
+
+
+\subsection*{Comments}
+Graph Convolutional Network is currently among the go-to model for graph 
+learning related task and is still to some extend considered state of the 
+art for semi-supervised node classification. 
+
+Learning from a graph structured data using a convolution mechanism might 
+seem natural at first, but the authors showed that with prior mathematical
+preprocessing of some representation and properties of a graph such as
+the graph laplacian (computed from the adjacency and the degree matrix)
+we can obtain results better than previous state of the art.
+However due to the extensive mathematical preprocessing, the model
+might not feel very intuitive.
+
+\end{document}
